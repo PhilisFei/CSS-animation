@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        img {
+            height: 100%;
+            width: 600px;
+        }
+
+        .img-wrap {
+            position: relative;
+            width: 600px;
+            height: 500px;
+            margin: 100px auto;
+        }
+
+        .img-wrap .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 设了absolute后宽度高度不会自己撑开 */
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .5);
+            color: #fff;
+            text-align: center;
+            line-height: 200;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .img-wrap::before,
+        .img-wrap::after,
+        .img-wrap .mask::before,
+        .img-wrap .mask::after {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 1;
+            transition: all .3s;
+        }
+
+        .img-wrap::before,
+        .img-wrap::after {
+            width: 100%;
+            height: 0;
+            opacity: 0;
+        }
+
+        .img-wrap .mask::before,
+        .img-wrap .mask::after {
+            width: 0;
+            height: 100%;
+        }
+
+        .img-wrap::before {
+            border-top: 1px solid #fff;
+            top: 0;
+            left: 0;
+        }
+
+        .img-wrap::after {
+            border-bottom: 1px solid #fff;
+            bottom: 0;
+            left: 0;
+        }
+
+        .img-wrap .mask::before {
+            border-left: 1px solid #fff;
+            left: 0;
+            top: 0;
+        }
+
+        .img-wrap .mask::after {
+            border-right: 1px solid #fff;
+            right: 0;
+            top: 0;
+        }
+
+        .img-wrap:hover .mask {
+            opacity: 1;
+        }
+
+        .img-wrap:hover::before {
+            opacity: 1;
+            top: 50px;
+        }
+
+        .img-wrap:hover::after {
+            opacity: 1;
+            bottom: 50px;
+        }
+
+        .img-wrap:hover .mask::before {
+           left: 50px;;
+        }
+
+        .img-wrap:hover .mask::after {
+           right: 50px;;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-wrap">
+        <div class="mask">
+            <h1>世界末日宣言</h1>
+            <p>就算真的到了世界末日，我也要努力过好每一秒钟</p>
+        </div>
+        <img src="./222.jpg" alt="" />
+    </div>
+</body>
+</html>

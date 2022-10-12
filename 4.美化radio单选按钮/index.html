@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        .radio-wrap {
+            width: 100px;
+            height: 50px;
+        }
+
+        div {
+            box-sizing: border-box;
+        }
+
+        .radio-wrap .radio-box {
+            float: left;
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+
+        .radio-wrap .radio-box label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: #ddd;
+            border-radius: 50%;
+            box-shadow: 1px 3px 5px #ccc;
+            border: 2px solid #eee;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+        }
+
+        .radio-wrap .radio-box input[type="radio"] {
+            visibility: hidden;
+        }
+
+        .radio-wrap .radio-box input[type="radio"]:checked + label.male {
+            background-color: #ADD8E6;
+        }
+
+        .radio-wrap .radio-box input[type="radio"]:checked + label.female {
+            background-color: #D8BFD8;
+        }
+    </style>
+</head>
+<body>
+    <div class="radio-wrap">
+        <div class="radio-box">
+            <input type="radio" name="sex" id="male" value="male" checked />
+            <label for="male" class="fa fa-mars male"></label>
+        </div>
+        <div class="radio-box">
+            <input type="radio" name="sex" id="female" value="female" />
+            <label for="female" class="fa fa-venus female"></label>
+        </div>
+    </div>
+</body>
+</html>

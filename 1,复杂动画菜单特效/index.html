@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" rel="stylesheet">
+    <title>CSS3带动画特效的垂直导航菜单</title>
+    <style>
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        div,
+        li {
+            box-sizing: border-box;
+        }
+
+        @keyframes move {
+            0% {
+                left: -160px;
+                color: #fff;
+                font-size: 18px;
+            }
+            25% {
+                left: 45px;
+                color: #4c5a7d;
+                font-size: 22px;
+            }
+            50% {
+                left: 15px;
+                color: #fff;
+                font-size: 18px;
+            }
+            75% {
+                left: 35px;
+                color: #4c5a7d;
+                font-size: 20px;
+            }
+            100% {
+                left: 15px;
+                color: #6f153c;
+                font-size: 18px;
+            }
+        }
+
+        .menu-wrap {
+            width: 300px;
+            height: 402px;
+            background-color: #c2bfd2;
+            border: 1px solid #c2bfd2;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .menu-wrap .item {
+            position: relative;
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .menu-wrap .item .order {
+            position: absolute; 
+            top: 28px;
+            left: -160px;
+            animation-name: move;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            transition: all .2s;
+        }
+
+        .menu-wrap .item .fa {
+            position: absolute; 
+            top: 28px;
+            right: 15px;
+            font-size: 20px;
+            color: #6f153c;
+        }
+
+        .menu-wrap .item:hover {
+            background-color: #fff;
+        }
+
+        .menu-wrap .item .order-1 {
+            animation-delay: .5s;
+        }
+
+        .menu-wrap .item .order-2 {
+            animation-delay: .4s;
+        }
+
+        .menu-wrap .item .order-3 {
+            animation-delay: .3s;
+        }
+
+        .menu-wrap .item .order-4 {
+            animation-delay: .2s;
+        }
+
+        .menu-wrap .item .order-5 {
+            animation-delay: .1s;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="menu-wrap">
+        <ul class="menu-list">
+            <li class="item">
+                <a href="" class="order order-1">心理罪之城市之光</a>
+                <i class="fa fa-play-circle"></i>
+            </li>
+            <li class="item">
+                <a href="" class="order order-2">至爱梵高 星空之谜</a>
+                <i class="fa fa-play-circle"></i>
+            </li>
+            <li class="item">
+                <a href="" class="order order-3">相声大电影之我要幸福</a>
+                <i class="fa fa-play-circle"></i>
+            </li>
+            <li class="item">
+                <a href="" class="order order-4">东方快车谋杀案</a>
+                <i class="fa fa-play-circle"></i>
+            </li>
+            <li class="item">
+                <a href="" class="order order-5">超自然事件之坠龙事件</a>
+                <i class="fa fa-play-circle"></i>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

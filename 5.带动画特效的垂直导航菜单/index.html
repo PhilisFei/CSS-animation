@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        div, 
+        li {
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav-menu {
+            width: 500px;
+            margin: 200px auto;
+        }
+
+        .nav-menu .item {
+            height: 100px;
+            border-left: 10px solid #000;
+            box-shadow: 1px 2px 3px #666;
+            margin-top: 5px;
+            transition: all .3s;
+        }
+
+        .nav-menu .item .nav-lk {
+            display: block;
+            height: 100%;
+        }
+
+        .nav-menu .item .inner-box {
+            float: left;
+        }
+
+        .nav-menu .item .left {
+            width: 100px;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .nav-menu .item .left .fa {
+            font-size: 25px;
+            color: #000;
+            transition: all .3s;
+        }
+
+        .nav-menu .item .right {
+            width: 390px;
+            height: 100%;
+            padding: 20px 30px 20px 0;
+        }
+
+
+
+        .nav-menu .item .right h3, 
+        .nav-menu .item .right p {
+            transition: all .3s;
+        }
+
+        .nav-menu .item .right p {
+            margin-top: 7px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .nav-menu .item:hover {
+            border-color: #fdb04f;
+            background-color: #000;
+        }
+
+        .nav-menu .item:hover .fa {
+            color: #fbd04f;
+            transform: scale(1.5);
+        }
+
+        .nav-menu .item:hover h3 {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .nav-menu .item:hover p {
+            font-size: 20px;
+            color: #fdb04f;
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="nav-menu">
+        <ul class="nav-list">
+            <li class="item">
+                <a href="" class="nav-lk">
+                    <div class="inner-box left">
+                        <span class="fa fa-address-card"></span>
+                    </div>
+                    <div class="inner-box right">
+                        <h3>注册JS++前端培训中心</h3>
+                        <p>WEB前端，前端，后端，移动端，微信开发</p>
+                    </div>
+                </a>
+            </li>
+            <li class="item">
+                <a href="" class="nav-lk">
+                    <div class="inner-box left">
+                        <span class="fa fa-binoculars"></span>
+                    </div>
+                    <div class="inner-box right">
+                        <h3>寻找更多微信好课</h3>
+                        <p>WEB前后端基础课，进阶课，高级课</p>
+                    </div>
+                </a>
+            </li>
+            <li class="item">
+                <a href="" class="nav-lk">
+                    <div class="inner-box left">
+                        <span class="fa fa-flag"></span>
+                    </div>
+                    <div class="inner-box right">
+                        <h3>今日最新优秀课程</h3>
+                        <p>每日更新更多，更优秀的开发课</p>
+                    </div>
+                </a>
+            </li>
+            <li class="item">
+                <a href="" class="nav-lk">
+                    <div class="inner-box left">
+                        <span class="fa fa-graduation-cap"></span>
+                    </div>
+                    <div class="inner-box right">
+                        <h3>我学习过的课程</h3>
+                        <p>我爱学，我学过，我喜欢的课程</p>
+                    </div>
+                </a>
+            </li>
+            <li class="item">
+                <a href="" class="nav-lk">
+                    <div class="inner-box left">
+                        <span class="fa fa-gift"></span>
+                    </div>
+                    <div class="inner-box right">
+                        <h3>每日好礼优惠多</h3>
+                        <p>每日不同的优惠，不同的学习包奉送</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
